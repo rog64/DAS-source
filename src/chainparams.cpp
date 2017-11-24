@@ -141,7 +141,7 @@ public:
         // Das BIP32 prvkeys start with 'dprv'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0xFD)(0xA4)(0xEA).convert_to_container<std::vector<unsigned char> >();
         // Das BIP44 coin type is '5'
-        base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80000005);
+        base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80000005).convert_to_container<std::vector<unsigned char> >();
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
         fMiningRequiresPeers = true;
@@ -233,7 +233,7 @@ public:
         // Testnet das BIP32 prvkeys start with 'DPRV'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3A)(0x58)(0xF3)(0x42).convert_to_container<std::vector<unsigned char> >();
         // Testnet das BIP44 coin type is '5' (All coin's testnet default)
-        base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80000001);
+        base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80000001).convert_to_container<std::vector<unsigned char> >();;
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
         fMiningRequiresPeers = true;
